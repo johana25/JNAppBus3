@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lista de rutas"
-        android:id="@+id/btn1"
+        android:id="@+id/btnListaRutas"
         android:layout_marginBottom="139dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
@@ -21,9 +21,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GPS"
-        android:id="@+id/btn2"
-        android:layout_alignBottom="@+id/btn1"
+        android:text="Ubicacion"
+        android:id="@+id/btnUbicacion"
+        android:layout_alignBottom="@+id/btnListaRutas"
         android:layout_alignParentEnd="true" />
 
     <EditText
