@@ -7,6 +7,7 @@ import android.location.LocationManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -40,17 +41,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         miUbicacion();
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//
+           return;
+        }
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+       //mMap.getUiSettings().setZoomGesturesEnabled(true);
 
     }
 
     // CREAMOS UN METODO QUE NOS SERVIRA PARA AGREGAR UN MARCADOR EN EL MAPA, CREAREMOS UN OBJETO LatLng, EN EL CUAL INCLUIREMOS LA LATITUD Y LONGITUD,
     // LUEGO UTILIZANDO EL ELEMENTO CameraUpdate, CENTRAREMOS LA CAMARA A LA POSICION DE NUESTRO MARKER
+
     private void agregarMarcador(double lat, double lng) {
         LatLng coordenadas = new LatLng(lat, lng);
         CameraUpdate miUbicacion = CameraUpdateFactory.newLatLngZoom(coordenadas, 16);
 
         //SI EL MARCADOR ES DIFERENTE DE NULL SE DEBERA REMOVER. SEGUIDAMENTE AGREGAMOS ALGUNAS PROPIEDADES A NUESTRO MARKER: UN TITULO Y UNA IMAGEN.
         // POR ULTIMO AGREGAMOS EL METODO animateCamera PARA MOVER LA CAMARA DESDE UNA POSICION A OTRA CON ANIMACION
+
         if (marcador != null) marcador.remove();
         marcador = mMap.addMarker(new MarkerOptions()
                 .position(coordenadas)
@@ -64,7 +74,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (location != null) {
             lat = location.getLatitude();
             lng = location.getLongitude();
-            agregarMarcador(lat, lng);
+           // agregarMarcador(lat, lng);
         }
     }
 

@@ -1,6 +1,8 @@
 package com.example.johanadenisse.jnappbus3;
 
+import android.content.Context;
 import android.content.Intent;
+import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,13 +13,21 @@ public class Principal extends AppCompatActivity {
     Button btn1, btn2;
     EditText edtxt;
 
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(newBase);
+        MultiDex.install(this);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_principal);
         btn1 = (Button) findViewById(R.id.btnListaRutas);
         btn2 = (Button) findViewById(R.id.btnUbicacion);
-        edtxt = (EditText) findViewById(R.id.edtxt);
+       // edtxt = (EditText) findViewById(R.id.edtxt);
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
