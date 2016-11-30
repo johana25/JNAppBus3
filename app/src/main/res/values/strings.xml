@@ -2,14 +2,14 @@
     <string name="app_name">JNAppBus3</string>
     <string name="title_activity_secundaria">Secundaria</string>
     <string-array name="rutas_camioneras">
-        <item>RUTA TEC II</item>
+        <item> RUTA TEC II</item>
         <item> R AUX-01 JUAN ESCUTIA-TECNOLOGICO-CENTRO</item>
         <item> R AUX-02 SUBE INDUSTRIAL X CANCHAS BAJA IND X P.  OROZCO</item>
         <item> R AUX-03 SUBE INDUSTRIAL X COLEGIO MILITAR BAJA INDUS.</item>
         <item> R AUX-04 DESARROLLO URBANO</item>
         <item> R AUX-05 TERMINAL SUR-INDEPENDENCIA-ALDAMA-PACHECO</item>
         <item> R AUX-06 TERM. NORTE - HNOS F. MAGON - TECNOLÓGICO - CENTRO</item>
-        <item>RUTAS ALIMENTADORAS</item>
+        <item> RUTAS ALIMENTADORAS</item>
         <item> RA-01 RIBERAS</item>
         <item> RA-02 20 ANIVERSARIO</item>
         <item> RA-03 VILLAS DEL NORTE</item>
@@ -59,8 +59,9 @@
         <item> RC-22 2 DE OCTUBRE</item>
         <item> RC-23 SANTA ROSA-SAN RAFAEL</item>
         <item> RC-24 ROSARIO</item>
-        <item> RC-25 RUTA 2 - CENTRO</item>
         <item> RC-26 CENTRO, JUAREZ, C.57</item>
+        <item> RC-25 RUTA 2 - CENTRO</item>
+
     </string-array>
     <string name="title_activity_lista_rutas">ListaRutas</string>
     <string name="title_activity_maps">Map</string>

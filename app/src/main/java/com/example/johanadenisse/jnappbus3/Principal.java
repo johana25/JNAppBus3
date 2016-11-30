@@ -2,9 +2,9 @@ package com.example.johanadenisse.jnappbus3;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +27,7 @@ public class Principal extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
         btn1 = (Button) findViewById(R.id.btnListaRutas);
         btn2 = (Button) findViewById(R.id.btnUbicacion);
-       // edtxt = (EditText) findViewById(R.id.edtxt);
+        // edtxt = (EditText) findViewById(R.id.edtxt);
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +46,4 @@ public class Principal extends AppCompatActivity {
 
 
     }
-
-
 }
