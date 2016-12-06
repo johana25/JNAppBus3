@@ -10,23 +10,63 @@
     tools:context="com.example.johanadenisse.jnappbus3.Principal">
 
     <Button
+        android:text="Iniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ubicacion"
-        android:id="@+id/btnUbicacion"
-        android:layout_alignBaseline="@+id/btnListaRutas"
-        android:layout_alignBottom="@+id/btnListaRutas"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/edtTxtPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:id="@+id/btnIniciarSesion"
+        android:onClick="onClickIniciar" />
 
-    <Button
+    <TextView
+        android:text="BIENVENIDO!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lista de rutas"
-        android:id="@+id/btnListaRutas"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="116dp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:fontFamily="cursive" />
 
+    <TextView
+        android:text="User:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/edtTxtUsuario"
+        android:layout_alignStart="@+id/edtTxtUsuario" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/edtTxtUsuario"
+        android:layout_below="@+id/textView2"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/edtTxtPass"
+        android:contentDescription="Password"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/edtTxtUsuario"
+        android:layout_alignStart="@+id/edtTxtUsuario" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:text="Pass:"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/edtTxtUsuario"
+        android:layout_alignLeft="@+id/edtTxtPass"
+        android:layout_alignStart="@+id/edtTxtPass" />
 </RelativeLayout>

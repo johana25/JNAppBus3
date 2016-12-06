@@ -10,8 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Principal extends AppCompatActivity {
-    Button btn1, btn2;
-    EditText edtxt;
+    Button btnIniciar;
+    EditText edtTxtUsuario;
+    EditText edtTxtPass;
+    String tipo_usuario;
+
+
 
 
     @Override
@@ -23,27 +27,30 @@ public class Principal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_principal);
-        btn1 = (Button) findViewById(R.id.btnListaRutas);
-        btn2 = (Button) findViewById(R.id.btnUbicacion);
-        // edtxt = (EditText) findViewById(R.id.edtxt);
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
-                startActivity(intent);
-            }
-        });
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1 = new Intent(getApplicationContext(), ListaRutas.class);
-                startActivity(intent1);
-            }
-        });
+        // VINCULACION ELEMENTOS DE INTERFAZ GRAFICA
+        edtTxtUsuario = (EditText) findViewById(R.id.edtTxtUsuario);
+        edtTxtPass = (EditText) findViewById(R.id.edtTxtPass);
+        btnIniciar = (Button) findViewById(R.id.btnIniciarSesion);
+    }
 
+    private void verificarUsuario(String s, String s1) {
 
+        if (s.equals("admin") && (s1.equals("admin"))) {
+            tipo_usuario = "admin";
+        } else {
+            tipo_usuario = "user";
+
+        }
+        Intent intent = new Intent(getApplicationContext(), ListaRutas.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("TIPO_USUARIO", tipo_usuario);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    public void onClickIniciar(View v) {
+        verificarUsuario(edtTxtUsuario.getText().toString(), edtTxtPass.getText().toString());
     }
 }

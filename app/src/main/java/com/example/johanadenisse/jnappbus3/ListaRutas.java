@@ -17,7 +17,6 @@ public class ListaRutas extends AppCompatActivity {
         setContentView(R.layout.activity_lista_rutas);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         ClickLista();
     }
 
@@ -30,23 +29,26 @@ public class ListaRutas extends AppCompatActivity {
         lista1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Bundle bundle = new Bundle();
-                if (position == 1) {
-                    double[] coordenadas = new double[2];
-                    coordenadas[0] = 28.67;
-                    coordenadas[1] = -106.58;
+                // Obtiene el valor de la casilla elegida
+                String itemSeleccionado = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(), "" + itemSeleccionado, Toast.LENGTH_LONG).show();
 
-                    // Obtiene el valor de la casilla elegida
-                    String itemSeleccionado = parent.getItemAtPosition(position).toString();
-
-                    Toast.makeText(getApplicationContext(), "Mostrando Ruta de " + itemSeleccionado, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
-
-                    intent.putExtra("COORDENADAS", coordenadas);
-                    bundle.putDoubleArray("COORDENADAS", coordenadas);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
+                String tipo_usuario = getIntent().getStringExtra("TIPO_USUARIO");
+                if (tipo_usuario.equals("admin")) {
+                    Intent intent1 = new Intent(getApplicationContext(), grabarCoordenadas.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("NOMBRE_RUTA", itemSeleccionado);
+                    intent1.putExtras(bundle);
+                    startActivity(intent1);
+                } else {
+                    Intent intent3 = new Intent(getApplicationContext(), MapsActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("NOMBRE_RUTA", itemSeleccionado);
+                    intent3.putExtras(bundle);
+                    startActivity(intent3);
                 }
+
+
             }
         });
     }
