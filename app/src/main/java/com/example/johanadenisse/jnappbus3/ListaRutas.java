@@ -7,7 +7,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class ListaRutas extends AppCompatActivity {
 
@@ -31,7 +30,6 @@ public class ListaRutas extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Obtiene el valor de la casilla elegida
                 String itemSeleccionado = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(), "" + itemSeleccionado, Toast.LENGTH_LONG).show();
 
                 String tipo_usuario = getIntent().getStringExtra("TIPO_USUARIO");
                 if (tipo_usuario.equals("admin")) {
