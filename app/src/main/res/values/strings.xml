@@ -1,4 +1,69 @@
 <resources>
     <string name="app_name">JNAppBus3</string>
     <string name="title_activity_secundaria">Secundaria</string>
+    <string-array name="rutas_camioneras">
+        <item> RUTA TEC II</item>
+        <item> R AUX-01 JUAN ESCUTIA-TECNOLOGICO-CENTRO</item>
+        <item> R AUX-02 SUBE INDUSTRIAL X CANCHAS BAJA IND X P.  OROZCO</item>
+        <item> R AUX-03 SUBE INDUSTRIAL X COLEGIO MILITAR BAJA INDUS.</item>
+        <item> R AUX-04 DESARROLLO URBANO</item>
+        <item> R AUX-05 TERMINAL SUR-INDEPENDENCIA-ALDAMA-PACHECO</item>
+        <item> R AUX-06 TERM. NORTE - HNOS F. MAGON - TECNOLÓGICO - CENTRO</item>
+        <item> RUTAS ALIMENTADORAS</item>
+        <item> RA-01 RIBERAS</item>
+        <item> RA-02 20 ANIVERSARIO</item>
+        <item> RA-03 VILLAS DEL NORTE</item>
+        <item> RA-04 CIRCUITO UNIVERSITARIO-CAFETALES-ARROYOS</item>
+        <item> RA-05 TARAHUMARA</item>
+        <item> RA-06 TEC II CHIHUAHUA 2000</item>
+        <item> RA-07 RUTA 100</item>
+        <item> RA-08 RUTA 5 NORTE</item>
+        <item> RA-09 GRANJAS</item>
+        <item> RA-10 RUTA 3-AMERICAS-ISSSTE</item>
+        <item> RA-11 NOMBRE DE DIOS OJO</item>
+        <item> RA-12 INFONAVIT-VILLA-REV</item>
+        <item> RA-13 KOMATSU VISTAS</item>
+        <item> RA-14 KOMATSU GRANJAS CERRO GRANDE</item>
+        <item> RA-15 AVALOS-PLAN DE AYALA-11 DE FEBRERO</item>
+        <item> RA-16 MARMOL</item>
+        <item> RA-17 VILLA JUAREZ KENNEDY VALLE DORADO</item>
+        <item> RA-18 DALE UP BELLAVISTA</item>
+        <item> RA-19 AEROPUERTO CAMINO REAL</item>
+        <item> RA-20 AEROPUERTO JARDINES DE ORIENTE</item>
+        <item> RA-21 AEROPUERTO PUNTA ORIENTE</item>
+        <item> RA-22 AEROPUERTO SIERRA AZUL</item>
+        <item> RA-23 AEROPUERTO URBI VILLAS DEL PRADO</item>
+        <item> RA-24 VILLA JUAREZ RUTA 15</item>
+        <item>RUTAS CONVENCIONALES</item>
+        <item> RC-01 PANAMERICANA SAN FELIPE</item>
+        <item> RC-02 PANAMERICANA MIRADOR</item>
+        <item> RC-03 RUTA SAN RAFAEL-CENTRO</item>
+        <item> RC-04 CIRCUNVALACION 1 TRAMO NORTE</item>
+        <item> RC-05 CIRCUNVALACION 1 TRAMO SUR GLORIETA CH-P</item>
+        <item> RC-06 CIRCUNVALACION 1 TRAMO SUR  POR PACHECO</item>
+        <item> RC-07 CIRCUNVALACION 2 - T. NORTE,JUVENTUD SALLE-MIRADOR</item>
+        <item> RC-08 CIRCUNVALACION 2 TERMINAL NORTE COLEGIO MILITAR</item>
+        <item> RC-09 CIRCUNVALACION 2 TERMINAL SUR-GLORIETA</item>
+        <item> RC-10 CIRCUNVALACION 2 ESTACION SUR CD JUDICIAL</item>
+        <item> RC-11 CERRO DE LA CRUZ RAMIRO VALLES CLINICA 33</item>
+        <item> RC-12 CERRO DE LA CRUZ RAMIRO VALLES CLINICA 33</item>
+        <item> RC-13 AV.ZARCO ESPERANZA</item>
+        <item> RC-14 AV.ZARCO MARTÍN LÓPEZ</item>
+        <item> RC-15 AV.ZARCO ZOOTECNIA</item>
+        <item> RC-16 BOLIVAR ZARCO SUBE 104 BAJA 92</item>
+        <item> RC-17 BOLIVAR ZARCO SUBE 92 BAJA 80</item>
+        <item> RC-18 CAMPESINA-ALDAMA-C.27</item>
+        <item> RC-19 COLINAS DE LEON-C4-CENTRO</item>
+        <item> RC-20 CONCORDIA-CENTRO</item>
+        <item> RC-21 SECTOR 3</item>
+        <item> RC-22 2 DE OCTUBRE</item>
+        <item> RC-23 SANTA ROSA-SAN RAFAEL</item>
+        <item> RC-24 ROSARIO</item>
+        <item> RC-26 CENTRO, JUAREZ, C.57</item>
+        <item> RC-25 RUTA 2 - CENTRO</item>
+
+    </string-array>
+    <string name="title_activity_lista_rutas">ListaRutas</string>
+    <string name="title_activity_maps">Map</string>
+
 </resources>

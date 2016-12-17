@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.johanadenisse.jnappbus3.ListaRutas">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryDark"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <include
+        layout="@layout/content_lista_rutas"
+        android:layout_width="320dp"
+        android:id="@+id/include2"
+        android:layout_height="48dp"
+        tools:layout_editor_absoluteY="338dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:entries="@array/rutas_camioneras"
+        android:id="@+id/MiLista"
+        android:layout_height="511dp"
+        style="@style/Widget.AppCompat.ListView"
+        android:headerDividersEnabled="false"
+        android:clickable="true"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_below="@+id/toolbar" />
+    <!-- app:layout_constraintTop_toBottomOf="@+id/toolbar" -->
+
+
+</RelativeLayout>
